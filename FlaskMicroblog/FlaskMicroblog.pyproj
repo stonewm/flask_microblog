@@ -16,7 +16,7 @@
     <PythonWsgiHandler>{StartupModule}.wsgi_app</PythonWsgiHandler>
     <Name>FlaskMicroblog</Name>
     <RootNamespace>FlaskMicroblog</RootNamespace>
-    <InterpreterId>{7a387af0-c58e-49c7-a561-644efacc1d05}</InterpreterId>
+    <InterpreterId>{fb9cdbb8-18e1-48b3-8b02-8f9d6638586d}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -29,6 +29,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="blogapp\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="blogapp\views.py">
       <SubType>Code</SubType>
     </Compile>
@@ -40,17 +43,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="requirements.txt" />
+    <Content Include="blogapp\templates\base.html" />
+    <Content Include="blogapp\templates\index.html" />
+    <Content Include="blogapp\templates\login.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="blogapp\" />
+    <Folder Include="blogapp\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="..\..\env-flask\">
-      <Id>{7a387af0-c58e-49c7-a561-644efacc1d05}</Id>
+    <Interpreter Include="D:\Programs\python_virtual\flask\">
+      <Id>{fb9cdbb8-18e1-48b3-8b02-8f9d6638586d}</Id>
       <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
       <Version>3.4</Version>
-      <Description>env-flask (Python 64-bit 3.4)</Description>
+      <Description>flask (Python 64-bit 3.4)</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <LibraryPath>Lib\</LibraryPath>
